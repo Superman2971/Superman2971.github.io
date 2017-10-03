@@ -36,4 +36,18 @@ jQuery(document).ready(function($) {
     $("#about_me").text(about_me[number]);
   }, 1000);
 
+  // Airplane Flying
+  setInterval(function(){
+    animateAirplane();
+  }, 5000);
+  // airplane animation function
+  function animateAirplane() {
+    $("#airplane").css({left: '100%', transition: '3s ease-in'});
+    setTimeout(function(){
+      $("#airplane").css({left: '-263px', transition: 'none'});
+    }, 3000);
+  }
+  // initial animation
+  animateAirplane();
+
 });
